@@ -1,7 +1,8 @@
 # Maven
 /target/
+.mvn/*
+!.mvn/wrapper/
 !.mvn/wrapper/maven-wrapper.jar
-.mvn/
 
 # IDEs
 .idea/
