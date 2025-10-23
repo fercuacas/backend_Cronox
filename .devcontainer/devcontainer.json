@@ -1,0 +1,19 @@
+{
+  "name": "Shop Backend",
+  "dockerFile": "Dockerfile.dev",
+  "runArgs": ["--network=host"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "richardwillis.vscode-spotless"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn -B dependency:go-offline",
+  "forwardPorts": [8080, 5432],
+  "remoteEnv": {
+    "SPRING_PROFILES_ACTIVE": "dev"
+  }
+}
