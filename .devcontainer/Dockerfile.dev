@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/devcontainers/java:1-17-bullseye
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends maven \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV MAVEN_CONFIG=/root/.m2
